@@ -1,0 +1,36 @@
+# combining conditions
+if True and True:  # for "and" both conditions have to be true. this returns true
+    print("True")
+
+if (
+    True or False
+):  # for "or" only one of the conditons has to be true. this returns true
+    print("True")
+
+if True and True and False or True:  # this returns true
+    print("True")
+
+# exercise
+money_available = 100
+hungry = True
+bored = True
+if money_available > 80 and hungry == True or bored == True:
+    print("Go out to eat")
+
+    # nested if statements
+    x = "1"
+if x in ["a", "b", "1"]:
+    print("a is in the list")
+    if x.isalpha():
+        print("it is a letter")
+
+        if True:
+            print("something")
+
+# exercise
+if money_available > 80:
+    print("I have enough money")
+    if hungry:  # dont need the == True because its a truthy variable
+        print("and I am hungry")
+        if bored == True:
+            print("and I'm going to eat something fancy")
